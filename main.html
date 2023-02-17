@@ -58,6 +58,7 @@
       };
     }
 	  function addSlide() {
+		  var scrolledImages = document.querySelectorAll(".slide-in");
   scrolledImages.forEach((img) => {
     var scrolledHeight = window.scrollY + window.innerHeight - img.height / 2;
     var imageBottomHeight = img.offsetTop + img.height;
@@ -72,6 +73,7 @@
     }
   });
 }
+	  window.addEventListener('scroll', debounce(addSlide) );
 
   </script>
 
